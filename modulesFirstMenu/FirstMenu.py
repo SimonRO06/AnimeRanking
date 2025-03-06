@@ -1,5 +1,6 @@
 from modules.Interfaces import MainMenu
 from modules.ScreenController import limpiar,pausar
+from modulesFirstMenu.Registrarse import registrarse
 
 def main_menu():
     while True:
@@ -12,7 +13,7 @@ def main_menu():
         else:
             if seleccion == 1:
                 limpiar()
-                pass
+                registrarse()
             if seleccion == 2:
                 limpiar()
                 pass
