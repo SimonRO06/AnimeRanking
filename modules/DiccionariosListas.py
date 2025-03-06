@@ -1,0 +1,2 @@
+listaEmails = []
+cuentas = {}
