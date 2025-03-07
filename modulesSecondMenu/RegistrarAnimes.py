@@ -1,42 +1,28 @@
 from modules.ScreenController import limpiar,pausar
-from modules.DiccionariosListas import cuentas
+from modules.DiccionariosListas import cuentas,listaAnimes,animes
 
 def registrar_animes(email):
-    listaAnimes = []
-    for i in range(5):
-        if i > 4:
-            break
+    anime = input('Ingrese el nombre del anime: ').replace(' ','-').lower()
+    try:
+        calificacion = float(input('Ingrese la calificacion del anime (1.0 - 5.0): '))
+    except ValueError:
+        print('Solo se pueden ingresar valores numericos...')
+        pausar()
+    else:
+        if calificacion < 1 or calificacion > 5:
+            print('La calificacion debe ser entre 1.0 y 5.0')
+            pausar()
         else:
-            anime = input('Ingrese un anime: ').lower().replace(" ", "-")
-            if anime in listaAnimes:
-                print('El anime ya se encuentra en la lista...')
-                print('Se ha eliminado todo exitosamente...')
-                animes.clear()
+            try:
+                episodios = int(input('Ingrese la cantidad de episodios: '))
+            except ValueError:
+                print('Solo se pueden ingresar valores numericos...')
                 pausar()
-                break
             else:
-                try:
-                    episodios = int(input('Ingrese la cantidad de episodios: '))
-                except ValueError:
-                    print('La cantidad de episodios debe ser numerica...')
+                comentario = input('Ingrese un comentario: ')
+                if anime in listaAnimes:
+                    cuentas[email][anime] = {'calificacion':calificacion,'episodios':episodios,'comentario':comentario}
                 else:
-                    try:
-                        valoracion = float(input('Ingrese la valoracion del anime: '))
-                    except ValueError:
-                        print('La valoracion debe ser numerica...')
-                    else:
-                        comentario = input('Escriba su opinion acerca del anime: ')
-                        animes = {
-                            anime: {
-                            'episodios': episodios,
-                            'valoracion': valoracion,
-                            'comentario': comentario
-                            }
-                        }
-                        listaAnimes.append(anime)
-                        cuentas.get(email).update(animes)
-                        print(cuentas)
-
-                        
-
-
+                    listaAnimes.append(anime)
+                    cuentas[email][anime] = {'calificacion':calificacion,'episodios':episodios,'comentario':comentario}
+                    animes[anime] = {'calificacion': calificacion,'episodios':episodios}
