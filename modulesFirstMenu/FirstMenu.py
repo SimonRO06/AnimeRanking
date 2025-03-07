@@ -1,6 +1,7 @@
 from modules.Interfaces import MainMenu
 from modules.ScreenController import limpiar,pausar
 from modulesFirstMenu.Registrarse import registrarse
+from modulesFirstMenu.EliminarCuenta import eliminar_cuenta
 
 def main_menu():
     while True:
@@ -19,7 +20,7 @@ def main_menu():
                 pass
             if seleccion == 3:
                 limpiar()
-                pass
+                eliminar_cuenta()
             if seleccion == 4:
                 limpiar()
                 print('Programa cerrado...')
