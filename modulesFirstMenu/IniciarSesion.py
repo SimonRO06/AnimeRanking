@@ -1,4 +1,5 @@
 from modules.DiccionariosListas import listaEmails,cuentas
+from modulesSecondMenu.SecondMenu import second_menu
 from modules.ScreenController import limpiar,pausar
 
 def iniciar_sesion():
@@ -6,7 +7,7 @@ def iniciar_sesion():
     if email in listaEmails:
         contraseña = input('Ingrese la contraseña: ')
         if contraseña == cuentas.get(email).get('contraseña'):
-            pass
+            second_menu(email)
         else:
             print('La contraseña no es la misma...')
             pausar()

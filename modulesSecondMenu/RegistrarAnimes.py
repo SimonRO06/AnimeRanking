@@ -10,7 +10,10 @@ def registrar_animes(email):
             anime = input('Ingrese un anime: ').lower().replace(" ", "-")
             if anime in listaAnimes:
                 print('El anime ya se encuentra en la lista...')
+                print('Se ha eliminado todo exitosamente...')
+                animes.clear()
                 pausar()
+                break
             else:
                 try:
                     episodios = int(input('Ingrese la cantidad de episodios: '))
@@ -23,13 +26,17 @@ def registrar_animes(email):
                         print('La valoracion debe ser numerica...')
                     else:
                         comentario = input('Escriba su opinion acerca del anime: ')
-                        anime = {
+                        animes = {
+                            anime: {
                             'episodios': episodios,
                             'valoracion': valoracion,
                             'comentario': comentario
+                            }
                         }
-                        cuentas.update(email[anime])
-                        
+                        listaAnimes.append(anime)
+                        cuentas.get(email).update(animes)
+                        print(cuentas)
+
                         
 
 
