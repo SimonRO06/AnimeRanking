@@ -2,7 +2,6 @@ from modules.DiccionariosListas import listaEmails,cuentas
 from modules.ScreenController import limpiar,pausar
 
 def eliminar_cuenta():
-    limpiar()
     email = input('Ingrese el email que desea eliminar: ')
     if email in listaEmails:
         seguro = input('Confirme eliminar (S/N): ').upper()

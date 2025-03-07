@@ -1,7 +1,9 @@
 from modules.Interfaces import MainMenu
 from modules.ScreenController import limpiar,pausar
+from modules.DiccionariosListas import listaEmails, cuentas
 from modulesFirstMenu.Registrarse import registrarse
 from modulesFirstMenu.EliminarCuenta import eliminar_cuenta
+from modulesFirstMenu.IniciarSesion import iniciar_sesion
 
 def main_menu():
     while True:
@@ -17,7 +19,7 @@ def main_menu():
                 registrarse()
             if seleccion == 2:
                 limpiar()
-                pass
+                iniciar_sesion()
             if seleccion == 3:
                 limpiar()
                 eliminar_cuenta()
