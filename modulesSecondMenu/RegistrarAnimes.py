@@ -26,3 +26,8 @@ def registrar_animes(email):
                     listaAnimes.append(anime)
                     cuentas[email][anime] = {'calificacion':calificacion,'episodios':episodios,'comentario':comentario}
                     animes[anime] = {'calificacion': calificacion,'episodios':episodios}
+                    print(f'--Se registro el anime en la cuenta: {email}--')
+                    print(f'Anime: {anime}')
+                    print(f'Calificación: {calificacion}')
+                    print(f'Episodios: {episodios}')
+                    print(f'Comentario: {comentario}')

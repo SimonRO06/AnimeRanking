@@ -1,6 +1,8 @@
 from modules.ScreenController import limpiar,pausar
 from modules.Interfaces import FunctionsMenu
 from modulesSecondMenu.RegistrarAnimes import registrar_animes
+from modulesSecondMenu.RankingGeneral import rank_general
+from modulesSecondMenu.RankingPersonal import rank_personal
 from modules.DiccionariosListas import cuentas
 
 def second_menu(email):
@@ -16,14 +18,14 @@ def second_menu(email):
             if seleccion == 1:
                 limpiar()
                 registrar_animes(email)
-                print(cuentas[email])
                 pausar()
             elif seleccion == 2:
                 limpiar()
-                pass
+                rank_general()
+                pausar()
             elif seleccion == 3:
                 limpiar()
-                pass
+                rank_personal(email)
             elif seleccion == 4:
                 limpiar()
                 pass
