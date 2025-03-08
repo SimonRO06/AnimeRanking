@@ -26,9 +26,11 @@ def second_menu(email):
             elif seleccion == 3:
                 limpiar()
                 rank_personal(email)
+                pausar()
             elif seleccion == 4:
                 limpiar()
                 pass
+                pausar()
             elif seleccion == 5:
                 break
             else:

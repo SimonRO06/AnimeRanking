@@ -15,10 +15,10 @@ FunctionsMenu = """
 ***** MENU FUNCIONES *****
 **************************
 --------------------------
-1. REGISTRAE ANIMES
+1. REGISTRAR/EDITAR ANIMES
 2. VER RANK GENERAL
 3. VER RANKING PERSONAL
-4. EDITAR ANIMES
+4. ELIMINAR ANIMES
 5. REGRESAR
 --------------------------
 """
