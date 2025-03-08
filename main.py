@@ -1,2 +1,4 @@
+from modulesFirstMenu.FirstMenu import main_menu
+
 if __name__ == "__main__":
-    pass
+    main_menu()

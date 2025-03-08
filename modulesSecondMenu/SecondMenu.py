@@ -3,6 +3,7 @@ from modules.Interfaces import FunctionsMenu
 from modulesSecondMenu.RegistrarAnimes import registrar_animes
 from modulesSecondMenu.RankingGeneral import rank_general
 from modulesSecondMenu.RankingPersonal import rank_personal
+from modulesSecondMenu.EliminarAnime import eliminar_anime
 from modules.DiccionariosListas import cuentas
 
 def second_menu(email):
@@ -29,7 +30,7 @@ def second_menu(email):
                 pausar()
             elif seleccion == 4:
                 limpiar()
-                pass
+                eliminar_anime(email)
                 pausar()
             elif seleccion == 5:
                 break
