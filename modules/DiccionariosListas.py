@@ -1,2 +1,4 @@
 listaEmails = []
 cuentas = {}
+listaAnimes = []
+animes = {}
